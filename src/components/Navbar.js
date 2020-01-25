@@ -25,16 +25,14 @@ export default class Navbar extends Component {
     render() {
         return(
             <Menu className='nav-menu'>
-                {/* <Menu.Item >
+                <Menu.Item >
                     <Link to="/home"> Home </Link>
-                </Menu.Item> */}
-
-                <Menu.Item onClick = {this.FrameRedirect}>
-                    Warframes
                 </Menu.Item>
-
-                <Menu.Item onClick = {this.WeaponsRedirect}>
-                    Weapons
+                <Menu.Item>
+                    <Link to="/frames">Warframes</Link>
+                </Menu.Item>
+                <Menu.Item>
+                    <Link to="/weapons">Weapons</Link>
                 </Menu.Item>
             </Menu>
         )

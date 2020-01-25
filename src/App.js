@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 import Frames from './components/Frames';
 import Weapons from './components/Weapons';
 
@@ -11,11 +12,8 @@ class App extends React.Component {
     return (
       <div>
         <Navbar/>
-        <div className='homepage'>
-            Warframe!
-        </div>
         <div>
-          <Route exact path='/home' component={App}/>
+          <Route exact path='/home' component={Home}/>
           <Route exact path='/frames' component={Frames}/>
           <Route exact path='/weapons' component={Weapons}/>
         </div>

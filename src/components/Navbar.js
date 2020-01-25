@@ -2,23 +2,24 @@ import React, {Component} from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
-const WEAPONS = 'https://api.warframestat.us/weapons'
 const FRAMES = 'https://api.warframestat.us/warframes'
+const WEAPONS = 'https://api.warframestat.us/weapons'
 
 
 export default class Navbar extends Component {
 
     FrameRedirect = async (e) => {
         e.preventDefault()
-        console.log('clicked')
         let response = await fetch(FRAMES);
         let data = await response.json()
         //send data
     }
    
-    WeaponsRedirect = (e) => {
+    WeaponsRedirect = async (e) => {
         e.preventDefault()
-        console.log('clicked')
+        let response = await fetch(WEAPONS);
+        let data = await response.json();
+        //send data
     }
 
     render() {

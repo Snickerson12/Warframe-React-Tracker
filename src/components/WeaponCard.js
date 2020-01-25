@@ -4,14 +4,14 @@ import { Card } from 'semantic-ui-react';
 export default class FrameCard extends Component{
 
     render() {
-        console.log(this.props.frames)
-        if(this.props.frames) {
+        console.log(this.props.weapons)
+        if(this.props.weapons) {
             return(
-                this.props.frames.map(f => 
+                this.props.weapons.map(w => 
                 <Card
-                    image = {f.wikiaThumbnail}
-                    header = {f.name}
-                    description = {f.description}
+                    image = {w.wikiaThumbnail}
+                    header = {w.name}
+                    description = {w.description}
                 />
                 )
             )       

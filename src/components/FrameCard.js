@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Checkbox } from 'semantic-ui-react';
 
 export default class FrameCard extends Component{
-
+   
     render() {
         console.log(this.props.frames)
         if(this.props.frames) {

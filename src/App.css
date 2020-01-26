@@ -12,3 +12,14 @@
   font-size: 1.5rem;
   text-align: center;
 }
+
+.weapon-card {
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+  grid-gap: 10px;
+  padding-left: 3vw;
+}
+
+.ui.card {
+  width: 20vw;
+}

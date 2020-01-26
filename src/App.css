@@ -23,3 +23,10 @@
 .ui.card {
   width: 20vw;
 }
+
+.frame-card {
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+  grid-gap: 10px;
+  padding-left: 3vw;
+}

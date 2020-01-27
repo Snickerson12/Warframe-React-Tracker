@@ -11,8 +11,9 @@ export default class FrameCard extends Component{
     }
 
     handleClick = (e) => {
-        console.log(e.target)
-        if(this.state.owned == false) {
+        let cardID = e.target.parentNode['id']
+        console.log(cardID)
+        if(this.state.owned === false) {
             this.setState({
                 owned: true,
                 bgColor: 'blue'

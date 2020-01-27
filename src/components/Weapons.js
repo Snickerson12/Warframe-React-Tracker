@@ -8,7 +8,7 @@ export default class Weapons extends Component {
         super(props)
         
         this.state = {
-            weapons: '',
+            weapons: ''
         }
     }
 

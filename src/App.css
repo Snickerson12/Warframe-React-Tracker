@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
   grid-gap: 10px;
-  padding-left: 3vw;
+  padding-left: 1.5vw;
 }
 
 .ui.card {

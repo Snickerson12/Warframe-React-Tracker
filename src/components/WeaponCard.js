@@ -6,12 +6,12 @@ export default class FrameCard extends Component{
         super()
         this.state = {
             owned: false,
-            bgColor: 'white'
+            bgColor: 'white',
         }
     }
 
-    handleClick = () => {
-        console.log("clicked")
+    handleClick = (e) => {
+        console.log(e.target)
         if(this.state.owned == false) {
             this.setState({
                 owned: true,
@@ -25,20 +25,30 @@ export default class FrameCard extends Component{
         }
     }
 
+    renderCard = (w, index) => {
+        return(
+            <Card
+                id = {index + 1}
+                image = {w.wikiaThumbnail}
+                header = {w.name}
+                description = {w.description}
+                onClick = {this.handleClick}
+                style = {{backgroundColor: this.state.bgColor}}
+            />
+        )
+    }
+
     render() {
-        console.log(this.props.weapons)
-        if(this.props.weapons) {
-            return(
-                this.props.weapons.map(w => 
-                <Card
-                    image = {w.wikiaThumbnail}
-                    header = {w.name}
-                    description = {w.description}
-                    onClick = {this.handleClick}
-                    style = {{backgroundColor: this.state.bgColor}}
-                />
-                )
-            )       
-        } else {return <div>Loading...</div>}
+        return (
+            <div className='weapon-card'>
+                {this.props.weapons
+                ?
+                    this.props.weapons.map((w, index) => this.renderCard(w, index))
+                :
+                    <div>Loading</div>
+                }
+            </div>
+        )
     }
 }
+

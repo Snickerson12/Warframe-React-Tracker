@@ -6,18 +6,21 @@ export default class FrameCard extends Component{
         super()
         this.state = {
             owned: false,
-            bgColor: 'none'
+            bgColor: 'white'
         }
     }
 
     handleClick = () => {
         console.log("clicked")
-        this.setState({
-            owned: true
-        })
-        if(this.state.owned) {
+        if(this.state.owned == false) {
             this.setState({
+                owned: true,
                 bgColor: 'blue'
+            })
+        }else{
+            this.setState({
+                owned: false,
+                bgColor: 'white'
             })
         }
     }

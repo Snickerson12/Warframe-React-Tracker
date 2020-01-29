@@ -25,14 +25,21 @@
 }
 
 .weapon-card {
-  display: grid;
-  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
-  grid-gap: 10px;
-  padding-left: 1.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.ui.card {
+.card-container {
   width: 20vw;
+  margin: 1.5vh 0 0 1vw;
+  padding: 0 0 1vh 1.5vw;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+.image {
+  max-width: 10vw;
 }
 
 .frame-card {

@@ -7,7 +7,7 @@ export default class Home extends Component{
         return(
             <div className='homepage'>
                 <img src = {imgSrc} className='home-logo'/> 
-                <div className='home-text'> Dedicated website to assist users in tracking frame and weapon ownership and mastery </div>
+                <div className='home-text'> Dedicated website to assist users in tracking frame and weapon ownership/mastery </div>
             </div>
         )
     }

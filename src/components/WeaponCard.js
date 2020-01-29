@@ -29,16 +29,27 @@ export default class FrameCard extends Component{
         }
     }
 
+    handleButton = () => {
+        console.log('button')
+    }
+
     renderCard = (w, index) => {
         return(
-            <Card
-                id = {index + 1}
-                image = {w.wikiaThumbnail}
-                header = {w.name}
-                description = {w.description}
-                onClick={() => this.handleClick(w)}
-                style = {{backgroundColor: this.state.bgColor}}
-            />
+            // <Card
+            //     id = {index + 1}
+            //     image = {w.wikiaThumbnail}
+            //     header = {w.name}
+            //     description = {w.description}
+            //     onClick={() => this.handleClick(w)}
+            //     style = {{backgroundColor: this.state.bgColor}}
+            // />
+            <div className='card-container' onClick={() => this.handleClick(w)} style = {{backgroundColor: this.state.bgColor}}>
+                <div>
+                    <div><img src={w.wikiaThumbnail} className='image'/></div>
+                    <div className="header">{w.name}</div>
+                    <div className="description"> {w.description} </div>
+                </div>
+            </div>
         )
     }
 

@@ -8,11 +8,13 @@ export default class FrameCard extends Component{
         if(this.props.frames) {
             return(
                 this.props.frames.map(f => 
-                <Card
-                    image = {f.wikiaThumbnail}
-                    header = {f.name}
-                    description = {f.description}
-                />
+                    <div className='card-container'>
+                        <div>
+                            <div><img src={f.wikiaThumbnail} className='frame-image'/></div>
+                            <div className="header">{f.name}</div>
+                            <div className="description"> {f.description} </div>
+                        </div>
+                    </div> 
                 )
             )       
         } else {return <div>Loading...</div>}

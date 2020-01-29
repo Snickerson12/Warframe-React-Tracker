@@ -32,19 +32,33 @@
 
 .card-container {
   width: 20vw;
+  height: 40vh;
   margin: 1.5vh 0 0 1vw;
   padding: 0 0 1vh 1.5vw;
   border: 2px solid grey;
   border-radius: 10px;
+  position: relative;
+}
+
+.header {
+  padding-bottom: 10px;
 }
 
 .image {
   max-width: 10vw;
 }
 
+.checkbox {
+  position: absolute;
+  bottom: 0
+}
+
+.frame-image {
+  max-height: 25vh;
+}
+
 .frame-card {
-  display: grid;
-  grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
-  grid-gap: 10px;
-  padding-left: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

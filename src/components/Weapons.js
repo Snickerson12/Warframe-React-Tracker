@@ -17,7 +17,7 @@ export default class Weapons extends Component {
         let weapons = await response.json();
         this.setState({
             weapons: weapons
-        }) //this.state.weapons
+        })
     }
 
     render() {

@@ -13,7 +13,7 @@ class App extends React.Component {
       <div>
         <Navbar/>
         <div>
-          <Route exact path='/home' component={Home}/>
+          <Route exact path='/' component={Home}/>
           <Route exact path='/frames' component={Frames}/>
           <Route exact path='/weapons' component={Weapons}/>
         </div>

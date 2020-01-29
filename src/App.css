@@ -1,16 +1,27 @@
+
 .nav-menu {
   height: 10vh;
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif;
 }
 
 .homepage {
   height: 90vh;
   padding: 2vh 0 0 2vh;
-  background-color: #200382;
+  background-color: #1d1b24;
   color: white;
   font-family: 'Roboto', sans-serif;  
   font-size: 1.5rem;
   text-align: center;
+}
+
+.home-logo {
+  max-width: 70vw;
+  padding: 7rem
+}
+
+.home-text {
+  font-size: 2rem;
+  color: #908e94;
 }
 
 .weapon-card {

@@ -8,7 +8,7 @@ export default class Navbar extends Component {
         return(
             <Menu className='nav-menu'>
                 <Menu.Item >
-                    <Link to="/home"> Home </Link>
+                    <Link to="/"> Home </Link>
                 </Menu.Item>
                 <Menu.Item>
                     <Link to="/frames">Warframes</Link>

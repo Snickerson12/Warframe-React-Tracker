@@ -10,13 +10,16 @@ export default class FrameCard extends Component{
         }
     }
 
-    handleClick = (e) => {
-        let cardID = e.target.parentNode['id']
-        console.log(cardID)
+    handleClick = (w) => {
+        console.log(w)
+        // if using event.target - let cardID = e.target.parentNode['id']
+        // gets id of selected weapon card
+        // needs to update state for just the selected weapon card
+        // else w gives you all fetched data for specific clicked weapon
         if(this.state.owned === false) {
             this.setState({
                 owned: true,
-                bgColor: 'blue'
+                bgColor: 'teal'
             })
         }else{
             this.setState({
@@ -33,7 +36,7 @@ export default class FrameCard extends Component{
                 image = {w.wikiaThumbnail}
                 header = {w.name}
                 description = {w.description}
-                onClick = {this.handleClick}
+                onClick={() => this.handleClick(w)}
                 style = {{backgroundColor: this.state.bgColor}}
             />
         )

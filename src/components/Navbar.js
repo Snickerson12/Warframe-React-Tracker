@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
-import { Menu } from 'semantic-ui-react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 export default class Navbar extends Component {
 
     render() {
         return(
-            <Menu className='nav-menu'>
-                <Menu.Item >
-                    <Link to="/"> Home </Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/frames">Warframes</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/weapons">Weapons</Link>
-                </Menu.Item>
-            </Menu>
+            <div className='navbar'>
+                <div className='dropdown'>
+                    <button className='dropbtn'>
+                        <i className="fas fa-bars"/>
+                    </button>
+                    <div className='dropdown-content'>
+                        <a href='/'>Home</a>
+                        <a href='/frames'>Warframes</a>
+                        <a href='/weapons'>Weapons</a>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

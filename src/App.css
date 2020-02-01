@@ -1,6 +1,6 @@
-/* .navbar {
-  background-color: blue;
-} */
+.navbar {
+  background-color: #01779E;
+}
 
 /* Navbar Dropdown Menu */
 
@@ -57,7 +57,7 @@
 .homepage {
   height: 90vh;
   padding: 2vh 0 0 2vh;
-  background-color: #1d1b24;
+  background-color: #242229;
   color: white;
   font-family: 'Roboto', sans-serif;  
   font-size: 1.5rem;

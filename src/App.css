@@ -80,57 +80,69 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #242229;
 }
 
 .frame-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #242229;
 }
 
-.card-container {
+.weapon-card-container {
   width: 20vw;
-  height: 40vh;
+  height: 45vh;
   margin: 1.5vh 0 0 1vw;
   padding: 0 0 1vh 1.5vw;
   border: 2px solid grey;
   border-radius: 10px;
   position: relative;
+  background-color: white;
 }
 
 .frame-card-container {
   width: 20vw;
-  height: 50vh;
+  height: 53vh;
   margin: 1.5vh 0 0 1vw;
   padding: 0 0 1vh 1.5vw;
   border: 2px solid grey;
   border-radius: 10px;
   position: relative;
+  background-color: white;
 }
 
 .header {
   padding-bottom: 10px;
+  padding-top: 10px
 }
 
-.image {
+.weapon-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh
+}
+
+.weapon-image {
   max-width: 10vw;
 }
 
+.frame-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh
+}
+
 .frame-image {
-  max-height: 5vh
+  max-height: 25vh
+}
+
+.description {
+  margin-right: 2vw
 }
 
 .checkbox {
   position: absolute;
-  bottom: 0
-}
-
-.frame-image {
-  max-height: 25vh;
-}
-
-.frame-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  bottom: 0;
+  margin-bottom: 2vh
 }

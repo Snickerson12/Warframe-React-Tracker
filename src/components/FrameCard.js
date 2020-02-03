@@ -21,7 +21,7 @@ export default class FrameCard extends Component{
             <div className='frame-card-container' onClick={() => this.handleClick(index)}>
                 <div>
                     <div id={index}/>
-                    <div>
+                    <div className='frame-image-container'>
                         <img src= {!f.wikiaThumbnail ? defaultLogo : f.wikiaThumbnail} className='frame-image'/>
                     </div>
                     <div className="header">{f.name}</div>

@@ -18,7 +18,6 @@ export default class Frames extends Component {
         this.setState({
             frames: frames
           })
-        //this.state.frames
     }
 
     render() {

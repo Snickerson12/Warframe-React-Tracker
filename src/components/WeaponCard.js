@@ -21,11 +21,11 @@ export default class FrameCard extends Component{
 
     renderCard = (w, index) => {
         return(
-            <div className='card-container' onClick={() => this.handleClick(index)}>
+            <div className='weapon-card-container' onClick={() => this.handleClick(index)}>
                 <div>
                     <div id={index}/>
-                    <div>                   
-                        <img src= {!w.wikiaThumbnail ? defaultLogo : w.wikiaThumbnail} className='image'/>
+                    <div className='weapon-image-container'>                   
+                        <img src= {!w.wikiaThumbnail ? defaultLogo : w.wikiaThumbnail} className='weapon-image'/>
                     </div>
                     <div className="header">{w.name}</div>
                     <div className="description"> {w.description} </div>

@@ -22,8 +22,13 @@ export default class Weapons extends Component {
 
     render() {
         return (
-            <div className='weapon-card'>
-                <WeaponCard weapons={this.state.weapons}/>
+            <div>
+                <div>
+
+                </div>
+                <div className='weapon-card'>
+                    <WeaponCard weapons={this.state.weapons}/>
+                </div>
             </div>
         )
     }

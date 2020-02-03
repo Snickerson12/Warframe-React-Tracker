@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+const defaultLogo = 'https://glyphs.wf/assets/images/icon.png'
 
 export default class FrameCard extends Component{
 
@@ -23,7 +24,9 @@ export default class FrameCard extends Component{
             <div className='card-container' onClick={() => this.handleClick(index)}>
                 <div>
                     <div id={index}/>
-                    <div><img src={w.wikiaThumbnail} className='image'/></div>
+                    <div>                   
+                        <img src= {!w.wikiaThumbnail ? defaultLogo : w.wikiaThumbnail} className='image'/>
+                    </div>
                     <div className="header">{w.name}</div>
                     <div className="description"> {w.description} </div>
                     <form className='checkbox'>

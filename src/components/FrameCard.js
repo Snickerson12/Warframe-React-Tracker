@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 const defaultLogo = 'https://glyphs.wf/assets/images/icon.png'
 
 export default class FrameCard extends Component{

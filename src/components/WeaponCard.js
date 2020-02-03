@@ -38,12 +38,7 @@ export default class FrameCard extends Component{
     render() {
         return (
             <div className='weapon-card'>
-                {this.props.weapons
-                ?
-                    this.props.weapons.map((w, index) => this.renderCard(w, index))
-                :
-                    <div>Loading</div>
-                }
+                {this.props.weapons ? this.props.weapons.map((w, index) => this.renderCard(w, index)) : <div>Loading</div> }
             </div>
         )
     }

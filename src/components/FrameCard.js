@@ -1,34 +1,30 @@
 import React, {Component} from 'react';
-import { Card, Checkbox } from 'semantic-ui-react';
+
+const defaultLogo = 'https://glyphs.wf/assets/images/icon.png'
 
 export default class FrameCard extends Component{
-    constructor() {
-        super()
-        this.state = {
-            owned: false,
-            bgColor: 'white',
-        }
-    }
 
-    handleClick = (f) => {
-        if(this.state.owned === false) {
-            this.setState({
-                owned: true,
-                bgColor: 'teal'
-            })
-        }else{
-            this.setState({
-                owned: false,
-                bgColor: 'white'
-            })
+    handleClick = (index) => {
+        localStorage.setItem(index, 'unowned')
+        let card = document.getElementById(index).parentNode.parentNode
+        if (localStorage.index == 'unowned') {
+            card.style.backgroundColor = 'teal'
+            localStorage.index = 'owned'
+        } else {
+            card.style.backgroundColor = 'white'
+            localStorage.index = 'unowned'
         }
     }
+    
 
     renderCard = (f, index) => {
         return(
-            <div className='frame-card-container' onClick={() => this.handleClick(f)} style = {{backgroundColor: this.state.bgColor}}>
+            <div className='frame-card-container' onClick={() => this.handleClick(index)}>
                 <div>
-                    <div><img src={f.wikiaThumbnail} className='frame-image'/></div>
+                    <div id={index}/>
+                    <div>
+                        <img src= {!f.wikiaThumbnail ? defaultLogo : f.wikiaThumbnail} className='frame-image'/>
+                    </div>
                     <div className="header">{f.name}</div>
                     <div className="description"> {f.description} </div>
                     <form className='checkbox'>

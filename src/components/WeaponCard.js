@@ -1,31 +1,16 @@
 import React, {Component} from 'react';
-import { Card, Checkbox } from 'semantic-ui-react';
 
 export default class FrameCard extends Component{
-    constructor() {
-        super()
-        this.state = {
-            owned: false,
-            bgColor: 'white',
-        }
-    }
 
-    handleClick = (w) => {
-        console.log(w)
-        // if using event.target - let cardID = e.target.parentNode['id']
-        // gets id of selected weapon card
-        // needs to update state for just the selected weapon card
-        // else w gives you all fetched data for specific clicked weapon
-        if(this.state.owned === false) {
-            this.setState({
-                owned: true,
-                bgColor: 'teal'
-            })
-        }else{
-            this.setState({
-                owned: false,
-                bgColor: 'white'
-            })
+    handleClick = (index) => {
+        localStorage.setItem(index, 'unowned')
+        let card = document.getElementById(index).parentNode.parentNode
+        if (localStorage.index == 'unowned') {
+            card.style.backgroundColor = 'teal'
+            localStorage.index = 'owned'
+        } else {
+            card.style.backgroundColor = 'white'
+            localStorage.index = 'unowned'
         }
     }
 
@@ -35,8 +20,9 @@ export default class FrameCard extends Component{
 
     renderCard = (w, index) => {
         return(
-            <div className='card-container' onClick={() => this.handleClick(w)} style = {{backgroundColor: this.state.bgColor}}>
+            <div className='card-container' onClick={() => this.handleClick(index)}>
                 <div>
+                    <div id={index}/>
                     <div><img src={w.wikiaThumbnail} className='image'/></div>
                     <div className="header">{w.name}</div>
                     <div className="description"> {w.description} </div>

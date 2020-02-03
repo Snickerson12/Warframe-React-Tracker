@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import WeaponCard from './WeaponCard';
+import Search from './Search';
 
 const WEAPONS = 'https://api.warframestat.us/weapons'
 
@@ -23,8 +24,8 @@ export default class Weapons extends Component {
     render() {
         return (
             <div>
-                <div>
-
+                <div className='search-bar'>
+                    <Search />
                 </div>
                 <div className='weapon-card'>
                     <WeaponCard weapons={this.state.weapons}/>

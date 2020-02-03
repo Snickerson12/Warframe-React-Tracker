@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import FrameCard from './FrameCard';
+import Search from './Search';
 
 const FRAMES = 'https://api.warframestat.us/warframes'
 
@@ -22,8 +23,13 @@ export default class Frames extends Component {
 
     render() {
         return(
-            <div className='frame-card'>
-                <FrameCard frames={this.state.frames}/>
+            <div>
+                <div className='search-bar'>
+                    <Search />
+                </div>
+                <div className='frame-card'>
+                    <FrameCard frames={this.state.frames}/>
+                </div>
             </div>
         )
     }

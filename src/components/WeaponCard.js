@@ -4,14 +4,14 @@ const defaultLogo = 'https://glyphs.wf/assets/images/icon.png'
 export default class FrameCard extends Component{
 
     handleClick = (index) => {
-        localStorage.setItem(index, 'unowned')
+        sessionStorage.setItem(index, 'unowned')
         let card = document.getElementById(index).parentNode.parentNode
-        if (localStorage.index === 'unowned') {
+        if (sessionStorage.index === 'unowned') {
             card.style.backgroundColor = '#c9f1f5'
-            localStorage.index = 'owned'
+            sessionStorage.index = 'owned'
         } else {
             card.style.backgroundColor = 'white'
-            localStorage.index = 'unowned'
+            sessionStorage.index = 'unowned'
         }
     }
 

@@ -6,8 +6,8 @@ export default class FrameCard extends Component{
     handleClick = (index) => {
         localStorage.setItem(index, 'unowned')
         let card = document.getElementById(index).parentNode.parentNode
-        if (localStorage.index == 'unowned') {
-            card.style.backgroundColor = 'teal'
+        if (localStorage.index === 'unowned') {
+            card.style.backgroundColor = '#c9f1f5'
             localStorage.index = 'owned'
         } else {
             card.style.backgroundColor = 'white'
@@ -22,7 +22,7 @@ export default class FrameCard extends Component{
                 <div>
                     <div id={index}/>
                     <div className='frame-image-container'>
-                        <img src= {!f.wikiaThumbnail ? defaultLogo : f.wikiaThumbnail} className='frame-image'/>
+                        <img src= {!f.wikiaThumbnail ? defaultLogo : f.wikiaThumbnail} className='frame-image' alt={f.name}/>
                     </div>
                     <div className="header">{f.name}</div>
                     <div className="description"> {f.description} </div>

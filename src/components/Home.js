@@ -6,7 +6,7 @@ export default class Home extends Component{
     render() {
         return(
             <div className='homepage'>
-                <img src = {imgSrc} className='home-logo'/> 
+                <img src = {imgSrc} className='home-logo' alt='warframe logo'/> 
                 <div className='home-text'> Dedicated website to assist users in tracking frame and weapon ownership/mastery </div>
             </div>
         )

@@ -9,7 +9,8 @@ export default class Weapons extends Component {
         super(props)
         
         this.state = {
-            weapons: ''
+            weapons: '',
+            singleWeapon: ''
         }
     }
 
@@ -21,14 +22,20 @@ export default class Weapons extends Component {
         })
     }
 
+    handleSearch = async (filter) => {
+        await this.setState({
+            singleWeapon: filter.weapon
+        })
+    }
+
     render() {
         return (
             <div>
                 <div className='search-bar'>
-                    <Search />
+                    <Search weapons={this.state.weapons} handleSearch={this.handleSearch}/>
                 </div>
                 <div className='weapon-card'>
-                    <WeaponCard weapons={this.state.weapons}/>
+                    <WeaponCard weapons={this.state.weapons} search={this.state.singleWeapon}/>
                 </div>
             </div>
         )

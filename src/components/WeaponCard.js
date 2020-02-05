@@ -6,8 +6,8 @@ export default class FrameCard extends Component{
     handleClick = (index) => {
         localStorage.setItem(index, 'unowned')
         let card = document.getElementById(index).parentNode.parentNode
-        if (localStorage.index == 'unowned') {
-            card.style.backgroundColor = 'teal'
+        if (localStorage.index === 'unowned') {
+            card.style.backgroundColor = '#c9f1f5'
             localStorage.index = 'owned'
         } else {
             card.style.backgroundColor = 'white'
@@ -25,7 +25,7 @@ export default class FrameCard extends Component{
                 <div>
                     <div id={index}/>
                     <div className='weapon-image-container'>                   
-                        <img src= {!w.wikiaThumbnail ? defaultLogo : w.wikiaThumbnail} className='weapon-image'/>
+                        <img src= {!w.wikiaThumbnail ? defaultLogo : w.wikiaThumbnail} className='weapon-image' alt={w.name}/>
                     </div>
                     <div className="header">{w.name}</div>
                     <div className="description"> {w.description} </div>
@@ -39,9 +39,18 @@ export default class FrameCard extends Component{
     }
 
     render() {
+        let filter;
+        if(this.props.weapons && this.props.search == []) {
+            filter = this.props.weapons.map((w, index) => this.renderCard(w, index))
+        } else if (this.props.search) {
+            filter = this.props.search.map((w, index) => this.renderCard(w, index))
+        } else {return <div>Loading</div>}
+
+
         return (
             <div className='weapon-card'>
-                {this.props.weapons ? this.props.weapons.map((w, index) => this.renderCard(w, index)) : <div>Loading</div> }
+                {filter}
+                {/* {this.props.weapons ? this.props.weapons.map((w, index) => this.renderCard(w, index)) : <div>Loading</div> } */}
             </div>
         )
     }

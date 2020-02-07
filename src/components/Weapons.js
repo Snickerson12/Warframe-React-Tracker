@@ -28,11 +28,17 @@ export default class Weapons extends Component {
         })
     }
 
+    handleClear = async (weapons) => {
+        await this.setState({
+            singleWeapon: weapons
+        })
+    }
+ 
     render() {
         return (
             <div>
                 <div className='search-bar'>
-                    <Search weapons={this.state.weapons} handleSearch={this.handleSearch}/>
+                    <Search weapons={this.state.weapons} handleSearch={this.handleSearch} handleClear={this.handleClear}/>
                 </div>
                 <div className='weapon-card'>
                     <WeaponCard weapons={this.state.weapons} search={this.state.singleWeapon}/>

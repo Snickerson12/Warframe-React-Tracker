@@ -29,6 +29,14 @@ export default class Search extends Component {
         this.props.handleSearch(this.state)
     }
 
+    handleClear = async (e) => {
+        e.preventDefault()
+        await this.setState({
+            input: ''
+        })
+        this.props.handleClear(this.props.weapons)
+    }
+
     render() {
         return (
             <div className="search-form">
@@ -36,6 +44,7 @@ export default class Search extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <input className="search-params" type="text" name="input" onChange={this.handleChange} />
                         <input type="submit" value="Search" />
+                        <button onClick={this.handleClear}>Clear</button>
                     </form>
                 </div>
             </div>

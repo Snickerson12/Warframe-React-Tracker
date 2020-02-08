@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class Search extends Component {
+export default class FrameSearch extends Component {
     constructor(props) {
         super(props)
         this.state = {
             input: '',
-            weapon: []
+            frame: []
         }
     }
 
@@ -19,12 +19,12 @@ export default class Search extends Component {
     handleSubmit = async (e) => {
         e.preventDefault()
         let searchInput = this.state.input
-        const weaponsArray = this.props.weapons.slice()
-        const filteredWeapons = weaponsArray.filter(weapon => {
-            return (weapon.name.toLowerCase() === searchInput.toLowerCase())
+        const framesArray = this.props.frames.slice()
+        const filteredFrames = framesArray.filter(frame => {
+            return (frame.name.toLowerCase() === searchInput.toLowerCase())
         })
         await this.setState({
-            weapon: filteredWeapons
+            frame: filteredFrames
         })
         this.props.handleSearch(this.state)
     }
@@ -34,7 +34,7 @@ export default class Search extends Component {
         await this.setState({
             input: ''
         })
-        this.props.handleClear(this.props.weapons)
+        this.props.handleClear(this.props.frames)
     }
 
     render() {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import WeaponCard from './WeaponCard';
-import Search from './Search';
+import WeaponSearch from './WeaponSearch';
 
 const WEAPONS = 'https://api.warframestat.us/weapons'
 
@@ -38,7 +38,7 @@ export default class Weapons extends Component {
         return (
             <div>
                 <div className='search-bar'>
-                    <Search weapons={this.state.weapons} handleSearch={this.handleSearch} handleClear={this.handleClear}/>
+                    <WeaponSearch weapons={this.state.weapons} handleSearch={this.handleSearch} handleClear={this.handleClear}/>
                 </div>
                 <div className='weapon-card'>
                     <WeaponCard weapons={this.state.weapons} search={this.state.singleWeapon}/>

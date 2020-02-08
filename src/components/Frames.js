@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import FrameCard from './FrameCard';
-import Search from './Search';
+import FrameSearch from './FrameSearch';
 
 const FRAMES = 'https://api.warframestat.us/warframes'
 
@@ -10,6 +10,7 @@ export default class Frames extends Component {
         
         this.state = {
             frames: '',
+            singleFrame: ''
         }
     }
 
@@ -21,14 +22,26 @@ export default class Frames extends Component {
           })
     }
 
+    handleClear = async (frames) => {
+        await this.setState({
+            singleFrame: frames
+        })
+    }
+
+    handleSearch = async (filter) => {
+        await this.setState({
+            singleFrame: filter.frame
+        })
+    }
+
     render() {
         return(
             <div>
                 <div className='search-bar'>
-                    <Search />
+                    <FrameSearch frames={this.state.frames} handleSearch={this.handleSearch} handleClear={this.handleClear}/>
                 </div>
                 <div className='frame-card'>
-                    <FrameCard frames={this.state.frames}/>
+                    <FrameCard frames={this.state.frames} search={this.state.singleFrame}/>
                 </div>
             </div>
         )

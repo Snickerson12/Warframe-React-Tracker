@@ -36,14 +36,16 @@ export default class FrameCard extends Component{
     }
    
     render() {
+        let filter;
+        if(this.props.frames && this.props.search == []) {
+            filter = this.props.frames.map((f, index) => this.renderCard(f, index))
+        } else if (this.props.search) {
+            filter = this.props.search.map((f, index) => this.renderCard(f, index))
+        } else {return <div>Loading</div>}
+
         return(
             <div className='frame-card'>
-                {this.props.frames
-                ?
-                    this.props.frames.map((f, index) => this.renderCard(f, index))
-                :
-                    <div>Loading</div>
-                }
+                {filter}
             </div>  
         )       
     }

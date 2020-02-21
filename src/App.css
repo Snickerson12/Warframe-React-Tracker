@@ -171,9 +171,34 @@
 
 .login-page {
   background-color: #242229;
-  height: 100vh;
+  height: 90vh;
   color: white;
   text-align: center;
   font-size: 2rem;
   padding-top: 2%;
 }
+
+#login-text {
+  padding: 3% 0 3% 0;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-input {
+  max-width: 30%;
+  margin-left: 36vw;
+  margin-bottom: 5%;
+}
+
+#form-label {
+  margin-bottom: 2%;
+}
+
+.login-submit {
+  max-width: 30%;
+  margin-left: 36vw;
+}
+

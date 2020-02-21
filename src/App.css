@@ -53,6 +53,13 @@
   background-color: #45a8e6;
 }
 
+.login-button {
+  padding: 1.5% 1% 0 2%;
+  background-color: #45d0e6;
+  color: white;
+  font-size: 1.5rem;
+}
+
 /* Search Bar */
 
 .search-bar {
@@ -158,4 +165,15 @@
   position: absolute;
   bottom: 0;
   margin-bottom: 2vh
+}
+
+/* Login Page */
+
+.login-page {
+  background-color: #242229;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2%;
 }

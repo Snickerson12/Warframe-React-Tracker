@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 export default class Navbar extends Component {
 
+
     render() {
         return(
             <div className='navbar'>
@@ -14,6 +15,9 @@ export default class Navbar extends Component {
                         <a href='/frames'>Warframes</a>
                         <a href='/weapons'>Weapons</a>
                     </div>
+                </div>
+                <div className='login-button'>
+                    <a href='/login'>Login</a>
                 </div>
             </div>
         )

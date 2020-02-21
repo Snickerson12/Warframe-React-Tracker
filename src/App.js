@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Frames from './components/Frames';
 import Weapons from './components/Weapons';
+import Login from './components/Login';
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home}/>
           <Route exact path='/frames' component={Frames}/>
           <Route exact path='/weapons' component={Weapons}/>
+          <Route exact path='/login' component={Login}/>
         </div>
       </div>
     );

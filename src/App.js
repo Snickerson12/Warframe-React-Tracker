@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Frames from './components/Frames';
 import Weapons from './components/Weapons';
 import Login from './components/Login';
+import Enroll from './components/Enroll';
 
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
           <Route exact path='/frames' component={Frames}/>
           <Route exact path='/weapons' component={Weapons}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/enroll' component={Enroll}/>
         </div>
       </div>
     );

@@ -190,7 +190,7 @@
 #form-input {
   max-width: 30%;
   margin-left: 36vw;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 #form-label {
@@ -200,5 +200,9 @@
 .login-submit {
   max-width: 30%;
   margin-left: 36vw;
+}
+
+.sign-up-text {
+  padding-bottom: 2%;
 }
 

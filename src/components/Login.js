@@ -19,6 +19,9 @@ export default class Login extends Component {
         return(
             <div className='login-page'>
                 <div id='login-text'>User Login</div>
+                <div className='sign-up-text'>
+                    <a href='/enroll'>Don't have an account? Sign up here</a>
+                </div>
                 <form id='login-form'>
                     <label id='form-label'>Username </label>
                     <input type="text" name="username" onChange={this.handleChange} id='form-input'/>
